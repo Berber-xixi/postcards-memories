@@ -89,7 +89,7 @@
 <body>
   <header>
     <h1>Postcards & Memories</h1>
-    <p>Upload your photos and stories — let’s rediscover the quiet flavor of memory.</p>
+    <p>Upload your stories — let’s rediscover the quiet flavor of memory.</p>
   </header>
 
   <section class="gallery">
@@ -118,11 +118,9 @@
 
   <section class="upload-section">
     <h2>Share Your Story</h2>
-    <form action="https://formspree.io/f/xnndqyvg" method="POST" enctype="multipart/form-data">
-      <input type="file" name="image" accept="image/*" required>
+    <form onsubmit="location.href='thankyou.html'; return false;">
       <textarea name="story" rows="4" placeholder="What memory does your jar hold?" required></textarea>
       <input type="text" name="name" placeholder="Your name (optional)">
-      <input type="hidden" name="_redirect" value="thankyou.html">
       <button type="submit">Submit</button>
     </form>
   </section>
