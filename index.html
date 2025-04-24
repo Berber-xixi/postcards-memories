@@ -89,7 +89,7 @@
 <body>
   <header>
     <h1>Postcards & Memories</h1>
-    <p>Upload your stories — let’s rediscover the quiet flavor of memory.</p>
+    <p>Upload your photos and stories — let’s rediscover the quiet flavor of memory.</p>
   </header>
 
   <section class="gallery">
@@ -119,6 +119,7 @@
   <section class="upload-section">
     <h2>Share Your Story</h2>
     <form onsubmit="location.href='thankyou.html'; return false;">
+      <input type="file" name="image" accept="image/*">
       <textarea name="story" rows="4" placeholder="What memory does your jar hold?" required></textarea>
       <input type="text" name="name" placeholder="Your name (optional)">
       <button type="submit">Submit</button>
