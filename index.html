@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postcards & Memories</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f0e7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1rem;
+      color: #666;
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    .card .text {
+      padding: 1rem;
+    }
+    .card .text p {
+      margin: 0 0 0.5rem;
+    }
+    .card .text span {
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .upload-section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .upload-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 0.6rem;
+      background-color: #b84e2b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a54325;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Postcards & Memories</h1>
+    <p>Upload your photos and stories — let’s rediscover the quiet flavor of memory.</p>
+  </header>
+
+  <section class="gallery">
+    <div class="card">
+      <img src="images/jars_wall.jpg" alt="Row of Jars">
+      <div class="text">
+        <p>“These jars have stood here for generations. Each one has stored pickled memories.”</p>
+        <span>@Anonymous</span>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/jar_man.jpg" alt="Man with Jar">
+      <div class="text">
+        <p>“Every winter, my father still prepares snow cabbage in this jar — just like his father did.”</p>
+        <span>@Young Yu</span>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/salt_jar.jpg" alt="Salting Jar">
+      <div class="text">
+        <p>“The moment salt touches the leaves, you know it’s the start of a new season.”</p>
+        <span>@Min's Kitchen</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="upload-section">
+    <h2>Share Your Story</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required>
+      <textarea name="story" rows="4" placeholder="What memory does your jar hold?" required></textarea>
+      <input type="text" name="name" placeholder="Your name (optional)">
+      <input type="hidden" name="_redirect" value="thankyou.html">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>
